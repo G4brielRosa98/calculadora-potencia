@@ -2,6 +2,11 @@
 // Dados do enlace
 const potencialOLT = Number(process.argv[2]);    // potência de saida da OLT, em dBm
 const distanciaKm = Number(process.argv[3]);   // tamanho da fribra, em km
+if (process.argv.length < 4) {
+    console.log("Uso: node potencia.js <potência da OLT em dBm> <distância em km>");
+    console.log("Exemplo: node potencia.js 4 3");
+    process.exit(1)
+}
 const perdaPorKm = 0.35;    // perda da fibra, em dB por km
 
 // Cálculo
@@ -33,3 +38,4 @@ if (potenciaONU > -27) {
 } else {
     console.log("Enlace reprovado");
 }
+
