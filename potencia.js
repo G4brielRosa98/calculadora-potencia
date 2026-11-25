@@ -1,7 +1,7 @@
 
 // Dados do enlace
-const potencialOLT = 5;    // potência de saida da OLT, em dBm
-const distanciaKm = 3;   // tamanho da fribra, em km
+const potencialOLT = Number(process.argv[2]);    // potência de saida da OLT, em dBm
+const distanciaKm = Number(process.argv[3]);   // tamanho da fribra, em km
 const perdaPorKm = 0.35;    // perda da fibra, em dB por km
 
 // Cálculo
